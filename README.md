@@ -33,7 +33,7 @@ The students edit this section to add their names, Uniandes emails, and specify 
 
 1. Student-1, Krisy Jardanee Negrette Yara, <k.negrette@uniandes.edu.co>
 1. Student-2, Juan David Huertas Canchala, <jd.huertasc1@uniandes.edu.co>
-1. Student No. x
+1. Student-3, Juan David Huertas Canchala, <jd.huertasc1@uniandes.edu.co>
 
 [Back to top](#sample-conflicts)
 
