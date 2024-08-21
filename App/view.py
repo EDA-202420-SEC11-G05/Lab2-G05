@@ -51,6 +51,7 @@ def print_menu():
     print("2- Cargar Tags")
     # TODO: Mods de Est-1 en el Lab 2, agregar opcion 3
     print("3- Cargar Booktags")
+
     print("0- Salir")
 
 
@@ -59,7 +60,7 @@ def load_books(control):
     Carga los libros
     """
     books = logic.load_books(control,
-                                  "GoodReads/books-small.csv")
+                                  "GoodReads/books.csv")
     return books
 
 
@@ -67,6 +68,8 @@ def load_tags(control):
     """
     Carga los Tags
     """
+    tags = logic.load_tags(control,
+                                "GoodReads/tags.csv")
     return tags
 
 
@@ -75,10 +78,9 @@ def load_books_tags(control):
     Cargar los Tags de libros
     """
     # TODO: Mods de Est-1 en el Lab 2
-    tags = logic.load_tags(control,
-                                "GoodReads/tags.csv")
-
-
+    booktags = controller.load_book_tags(control,
+                                         "GoodReads/book_tags.csv")
+    pass
 
 
 def first_book(control):
@@ -86,8 +88,7 @@ def first_book(control):
     Devuelve el primer libro del catalogo
     """
     # TODO: Mods de Est-1 en el Lab 2
-    booktags = logic.first_book(control)
-    print("Primer libro cargado:\n" + str(first)+"\n")
+    pass
 
 
 def last_book(control):
@@ -95,9 +96,13 @@ def last_book(control):
     """
     Devuelve el último libro cargado
     """
-    last = logic.last_book(control)
-    return last
+    pass
 
+
+# Se crea el controlador asociado a la vista
+control = new_logic()
+
+# main del ejercicio
 def main():
     """
     Menu principal
@@ -116,8 +121,7 @@ def main():
             first = None
 
             # TODO: Mods de Est-2 en el Lab 2
-            last = last_book(control)
-            print("último libro cargado:\n" + str(last + "\n"))
+            last = None
 
         elif int(inputs[0]) == 2:
             print("Cargando información de tags....")
